@@ -9,7 +9,7 @@ SET /P server="Server [%server%]: "
 SET database=postgres
 SET /P database="Database [%database%]: "
 
-SET port=5434
+SET port=5433
 SET /P port="Port [%port%]: "
 
 SET username=postgres
@@ -20,7 +20,7 @@ if "%CLIENTENCODING_JP%"=="1" SET PGCLIENTENCODING=SJIS
 if "%CLIENTENCODING_JP%"=="1" SET /P PGCLIENTENCODING="Client Encoding [%PGCLIENTENCODING%]: "
 
 REM Run psql
-"C:\Program Files (x86)\PostgreSQL\9.2\bin\psql.exe" -h %server% -U %username% -d %database% -p %port%
+"C:\Program Files (x86)\PostgreSQL\9.3\bin\psql.exe" -h %server% -U %username% -d %database% -p %port%
 
 pause
 
